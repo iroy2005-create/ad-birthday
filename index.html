@@ -1,85 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7e9df"><title>For Adarsshh, with love ❤️</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8eee5">
+<title>For Adarsshh, My Love ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@500;600;700&display=swap');
+:root{--cream:#fff8ef;--paper:#f4e5d3;--ink:#44271f;--rose:#c95f69;--pink:#f4a2ad;--wine:#762d39;--gold:#c99a50}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7eee6;color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;z-index:0;background-image:radial-gradient(#8d6655 .65px,transparent .65px);background-size:17px 17px}
+.topbar{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;padding:15px clamp(14px,4vw,44px);font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:#815b50}
+.brand{font-weight:700;color:var(--wine)}.counter{font-variant-numeric:tabular-nums}
+main{position:relative;z-index:1;max-width:1050px;margin:auto;padding:10px 16px 44px}
+.page{display:none;animation:pageIn .7s ease both}.page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px) scale(.99)}to{opacity:1;transform:none}}
+.intro{text-align:center;padding:18px 0 10px}.eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:700}
+h1,h2{font-family:'Playfair Display',serif;font-weight:500}h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;margin:10px 0;color:var(--wine)}h2{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0 12px}
+.sub{color:#88695e;line-height:1.7;margin:0 auto 18px;max-width:600px}
+.art{display:block;width:min(100%,760px);max-height:72vh;object-fit:contain;margin:14px auto 18px;border-radius:8px;filter:drop-shadow(0 14px 18px #603d2a22)}
+.art.wide{width:min(100%,900px);max-height:none}
+.card-art{width:min(100%,500px);max-height:75vh}
+.actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin:18px auto}
+button{font:600 .94rem 'DM Sans',sans-serif;cursor:pointer;border:0;border-radius:99px;padding:13px 21px;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 8px 18px #603d2a22}
+.primary{background:var(--wine);color:#fff8ef}.secondary{background:#f2d9d0;color:#6c3338;border:1px solid #e6bcb1}
+.songbox{width:min(100%,460px);margin:18px auto 8px;padding:13px 15px;background:#fff9f1d9;border:1px solid #e8d5c5;border-radius:18px;text-align:center}
+.songbox strong{display:block;font-size:.88rem}.songbox small{display:block;color:#8c6e62;margin-top:4px;line-height:1.5}
+.player{width:100%;height:0;overflow:hidden;transition:height .3s}.player.visible{height:90px;margin-top:10px}.player iframe{width:100%;height:90px;border:0;border-radius:10px}
+.note{font-family:'Caveat',cursive;font-size:1.35rem;color:#865147}
+.envelope-wrap{margin:28px auto;max-width:470px;text-align:center}
+.envelope{position:relative;width:min(88vw,390px);height:250px;margin:25px auto 15px;cursor:pointer;filter:drop-shadow(0 14px 16px #5a2a2a22);transition:transform .25s}
+.envelope:hover{transform:translateY(-4px) rotate(-1deg)}
+.env-back{position:absolute;inset:0;background:#e9b9b2;border-radius:10px}
+.env-front{position:absolute;inset:38% 0 0;background:#d99191;clip-path:polygon(0 0,50% 62%,100% 0,100% 100%,0 100%);border-radius:0 0 10px 10px}
+.env-flap{position:absolute;inset:0;background:#f0cbc0;clip-path:polygon(0 0,100% 0,50% 63%);transform-origin:top;transition:transform .7s;z-index:2}
+.seal{position:absolute;z-index:3;left:50%;top:52%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#a93f4e;color:#fff;font-size:25px;box-shadow:0 3px 8px #7a293344}
+.envelope.opened .env-flap{transform:rotateX(180deg);z-index:0}.envelope.opened .seal{opacity:0}
+.letter-reveal{display:none;margin:20px auto;max-width:760px;position:relative}.letter-reveal.show{display:block;animation:pageIn .8s both}.letter-reveal img{width:100%;height:auto;border-radius:7px;box-shadow:0 16px 35px #5b352322}
+.balloon{position:fixed;bottom:-140px;z-index:3;pointer-events:none;font-size:46px;animation:balloonRise 9s linear forwards;filter:drop-shadow(0 4px 4px #0001)}
+@keyframes balloonRise{0%{transform:translateY(0) rotate(-8deg);opacity:0}10%{opacity:.95}90%{opacity:.9}100%{transform:translateY(-120vh) rotate(12deg);opacity:0}}
+.footer{text-align:center;color:#a18476;font-size:.75rem;padding:20px 0 0}
+@media(max-width:560px){.topbar{padding:13px 14px}.art{max-height:none}.card-art{width:100%}.envelope{height:210px}.player.visible{height:90px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition:none!important}}
+</style>
 </head>
 <body>
-<div class="grain"></div>
-<header class="topbar"><span class="tiny-heart">♥</span><span>made with all my love</span><span class="tiny-heart">♥</span></header>
+<div class="topbar"><div class="brand">♡ a little universe</div><div class="counter" id="counter">01 / 05</div></div>
 <main>
-  <section class="screen active" id="page-birthday" aria-label="Birthday card">
-    <div class="intro"><p class="eyebrow">a little world made just for you</p><h1>Happy Birthday,<br><em>Adarsshh, my love.</em></h1><p class="sub">Every little page has a piece of my heart.</p></div>
-    <img class="hero-art" src="assets/birthday-card.png" alt="Scrapbook birthday card with Adarsshh's photo and cute birthday decorations">
-    <button class="primary next" data-next="page-bros">Let's begin <span>→</span></button>
-  </section>
-
-  <section class="screen" id="page-bros" aria-label="Friends memories">
-    <div class="section-head"><p class="eyebrow">the people who make life louder</p><h2>Your Jigar Ka Tukdas</h2><p>Same madness, different days. Forever memories. ♥</p></div>
-    <img class="full-art" src="assets/bros-collage.png" alt="Vintage scrapbook collage of Adarsshh with his friends">
-    <div class="music-card"><span class="music-icon">♫</span><div><strong>Hum Nahi Sudhrenge</strong><small>for you and your boys · main hook</small></div><button class="music-toggle" data-song="bros" aria-label="Play Hum Nahi Sudhrenge">▶</button></div><div class="youtube-player" id="player-bros" hidden></div>
-    <div class="nav-row"><button class="secondary back" data-prev="page-birthday">← Back</button><button class="primary next" data-next="page-us">Our little world →</button></div>
-  </section>
-
-  <section class="screen" id="page-us" aria-label="Our memories">
-    <div class="section-head"><p class="eyebrow">my favourite kind of memories</p><h2>My Love</h2><p>Of all the little things life gave me, I'm happiest it gave me you.</p></div>
-    <img class="full-art" src="assets/couple-collage.png" alt="Romantic scrapbook collage of the couple's memories">
-    <div class="music-card"><span class="music-icon">♫</span><div><strong>Dil Na Jaaneya</strong><small>our little soundtrack · main hook</small></div><button class="music-toggle" data-song="us" aria-label="Play Dil Na Jaaneya">▶</button></div><div class="youtube-player" id="player-us" hidden></div>
-    <div class="nav-row"><button class="secondary back" data-prev="page-bros">← Back</button><button class="primary next" data-next="page-letter">A letter for you →</button></div>
-  </section>
-
-  <section class="screen letter-screen" id="page-letter" aria-label="Love letter">
-    <div class="section-head"><p class="eyebrow">something I've been wanting to tell you</p><h2>A letter, just for you 💌</h2><p>There's a little piece of my heart waiting inside.</p></div>
-    <div class="envelope-wrap">
-      <button class="envelope" id="open-letter" aria-label="Open the love letter"><span class="envelope-heart">♥</span><span class="envelope-label">click here, my love</span><span class="envelope-hint">✉</span></button>
+<section class="page active" id="p1">
+  <div class="intro"><div class="eyebrow">made with all my love · 26 october</div><h1>HAPPY BIRTHDAY ADARSSHH, MY LOVE</h1><p class="sub">Your own little corner of the universe. Every page has a piece of my heart. ♡</p></div>
+  <img class="art card-art" src="assets/birthday-card.png" alt="Handmade birthday card for Adarsshh">
+  <div class="actions"><button class="primary" onclick="goTo(2)">Start our little adventure ♡ →</button></div>
+</section>
+<section class="page" id="p2">
+  <div class="intro"><div class="eyebrow">the boys · the chaos · the memories</div><h2>Your Jigar Ka Tukdas 🫂</h2><p class="sub">Different people, same crazy memories with you.</p></div>
+  <img class="art wide" src="assets/bros-collage.png" alt="Scrapbook collage of Adarsshh and his friends">
+  <div class="songbox"><strong>♪ Hum Nahi Sudhrenge</strong><small>Tap play for your boys' anthem. The main section is queued, not the opening tune.</small><div class="actions"><button class="secondary" onclick="playSong('bros')">▶ Play song</button><button class="secondary" onclick="stopSong()">Ⅱ Stop music</button></div><div class="player" id="player-bros"></div></div>
+  <div class="actions"><button class="secondary" onclick="goTo(1)">← Back</button><button class="primary" onclick="goTo(3)">Now, us ♡ →</button></div>
+</section>
+<section class="page" id="p3">
+  <div class="intro"><div class="eyebrow">my favourite place is beside you</div><h2>My Love ♡</h2><p class="sub">Little moments, big feelings, and a thousand reasons to choose you.</p></div>
+  <img class="art wide" src="assets/couple-collage.png" alt="Scrapbook collage of the couple">
+  <div class="songbox"><strong>♪ Dil Na Janeya · Good Newwz</strong><small>A little soundtrack for us. Tap play when you're ready. ♡</small><div class="actions"><button class="secondary" onclick="playSong('couple')">▶ Play our song</button><button class="secondary" onclick="stopSong()">Ⅱ Stop music</button></div><div class="player" id="player-couple"></div></div>
+  <div class="actions"><button class="secondary" onclick="goTo(2)">← Back</button><button class="primary" onclick="goTo(4)">One letter, just for you 💌 →</button></div>
+</section>
+<section class="page" id="p4">
+  <div class="intro"><div class="eyebrow">a little something from my heart</div><h2>A letter for you 💌</h2><p class="sub">There are things I could say a thousand times and still never say enough.</p></div>
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open your love letter" onclick="openLetter()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetter()}">
+      <div class="env-back"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">♥</div>
     </div>
-    <div class="nav-row"><button class="secondary back" data-prev="page-us">← Back</button><button class="primary next" data-next="page-surprise">One last surprise →</button></div>
-  </section>
-
-  <section class="screen" id="page-surprise" aria-label="Special surprise">
-    <div class="surprise-center"><p class="eyebrow">one last little thing</p><h2>A Special Surprise</h2><p>There's one more memory I wanted to keep close to your heart.</p><button class="surprise-button" id="open-surprise"><span>♥</span><strong>Tap to open</strong><small>made with love, just for you</small></button></div>
-    <div class="nav-row"><button class="secondary back" data-prev="page-letter">← Back</button><button class="primary" id="restart">Start again ↺</button></div>
-  </section>
+    <div class="note">a tiny envelope, holding a very big feeling</div>
+    <div class="actions"><button class="primary" onclick="openLetter()">Click here to open your letter ♡</button></div>
+  </div>
+  <div class="letter-reveal" id="letterReveal"><img src="assets/love-letter.png" alt="A handwritten-style birthday love letter to Adarsshhhy"></div>
+  <div class="actions"><button class="secondary" onclick="goTo(3)">← Back</button><button class="primary" onclick="goTo(5)">One last surprise… 🎁 →</button></div>
+</section>
+<section class="page" id="p5">
+  <div class="intro"><div class="eyebrow">the last page · the softest part of your heart</div><h2>A Special Surprise ♡</h2><p class="sub">For the man who helped shape the man I love. Tap below, and let this little moment be yours.</p></div>
+  <div id="surprisePrompt" class="actions"><button class="primary" onclick="revealSurprise()">Open your special surprise ♡</button></div>
+  <div id="surpriseContent" hidden>
+    <img class="art wide" src="assets/dad-surprise.png" alt="Adarsshh with his dad, in a handmade scrapbook collage">
+    <div class="songbox"><strong>♪ Papa Meri Jaan · Animal</strong><small>For Papa. A little love, a little gratitude, and all the feelings. ♡</small><div class="actions"><button class="secondary" onclick="playSong('dad')">▶ Play Papa Meri Jaan</button><button class="secondary" onclick="stopSong()">Ⅱ Stop music</button></div><div class="player" id="player-dad"></div></div>
+    <p class="note" style="text-align:center;font-size:1.7rem">Papa, meri jaan, har-dum rakhna… ♡</p>
+  </div>
+  <div class="actions"><button class="secondary" onclick="goTo(4)">← Back to your letter</button><button class="primary" onclick="goTo(1)">Relive it all ↻</button></div>
+</section>
+<div class="footer">a little website, a whole lot of love · made for Adarsshhhy ♡</div>
 </main>
-<footer>always, in all the little ways. ♥</footer>
-
-<div class="modal" id="letter-modal" aria-hidden="true">
-  <div class="modal-backdrop" data-close="letter-modal"></div>
-  <article class="letter-paper modal-content" role="dialog" aria-modal="true" aria-labelledby="letter-title">
-    <button class="close" data-close="letter-modal" aria-label="Close letter">×</button>
-    <div class="letter-deco">♡　✿　♡</div>
-    <h2 id="letter-title">My Dear Adarsshhy,</h2>
-    <div class="letter-copy">
-      <p>Before I start saying anything, a very, very happy birthday to you. ❤️</p>
-      <p>Today's day is so special to me. I am forever going to be grateful for being a part of your life and having you as a part of mine. You are such an amazing person, and I can't ever say this enough, I love you so, so much.</p>
-      <p>Sometimes, I genuinely wonder how I got so lucky to have you in my life. Out of all the people in this world, somehow, I got to meet you, know you, get close to you, and fall in love with you. And if there's one thing I know for sure, it's that having you in my life is one of the most beautiful things that has ever happened to me.</p>
-      <p>I don't think you realise how much you mean to me, Adarsshhy. It's not just about the big things you do or the beautiful moments we share. It's the little things, too. The way you talk to me, the way you make me smile without even trying, the way even the most ordinary conversations become special just because they're with you. It's the way you have slowly become such an important part of my everyday life. You're someone I want to tell everything to, someone I want to share my happiness with, someone I want beside me when things aren't going so well, too.</p>
-      <p>And if I could wish for one thing on your birthday, it would be for you to see yourself the way I see you. I wish you could see how special you are, how much you have to offer this world, and how deeply you can be loved. I wish you could see all the little things about yourself that make me fall for you over and over again. Because, my love, you deserve so much happiness. You deserve to have your dreams come true, to achieve everything you've ever worked for, to be proud of the person you're becoming, and to have a life filled with all the beautiful things your heart wishes for.</p>
-      <p>I want to be there for you through all of it. I want to be the person who celebrates your smallest achievements as if they're the biggest victories in the world. I want to be the person you can come to when you've had a bad day, when things get overwhelming, or when you just need someone to listen to you. I want to remind you of how capable you are when you doubt yourself and remind you how loved you are, even on the days when you don't feel your best.</p>
-      <p>I know life won't always be perfect. We won't always have the best days, and we might not always agree on everything. But I hope we always remember why we chose each other in the first place. I hope we keep choosing to understand each other, to be patient with each other, to communicate, to grow, and to love each other a little better every day. I don't expect us to be perfect. I just want what we have to be real, honest, and something we both feel safe in.</p>
-      <p>You know, if someone asked me what I love most about you, I don't think I could give them just one answer. Because it's not one particular thing. It's you. It's the person you are, the person you are becoming, the way you make me feel, and the way you've found a place in my heart that nobody else could ever occupy in quite the same way. And no matter how many times I tell you that I love you, I don't think those three words will ever be enough to explain everything I feel for you.</p>
-      <p>I love you on your best days, on your ordinary days, on your difficult days, and on all the days in between. I love you for who you are today and for the person you're still growing into. And if there's one thing I want you to carry with you after reading this letter, it's that you are so, so loved.</p>
-      <p class="letter-bold">Happy birthday, my love.</p><p>Here's to you, to us, and to all the beautiful memories we haven't made yet.</p>
-      <p>Forever grateful that it's you. Forever happy that I get to love you.</p>
-      <p class="letter-signoff">I love you endlessly, my Adarsshhy. ♥</p>
-    </div>
-    <div class="balloon-field" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
-  </article>
-</div>
-
-<div class="modal" id="surprise-modal" aria-hidden="true">
-  <div class="modal-backdrop" data-close="surprise-modal"></div>
-  <article class="surprise-content modal-content" role="dialog" aria-modal="true" aria-labelledby="surprise-title">
-    <button class="close" data-close="surprise-modal" aria-label="Close surprise">×</button>
-    <p class="eyebrow">a little piece of your heart</p><h2 id="surprise-title">Your first hero, forever. ❤️</h2>
-    <p class="surprise-note">A little piece of your heart, and the man who will always have it.</p>
-    <img src="assets/dad-collage.png" alt="Adarsshh and his dad in a scrapbook collage" class="dad-art">
-    <div class="music-card dad-music"><span class="music-icon">♫</span><div><strong>Papa Meri Jaan</strong><small>for you and your forever hero · main hook</small></div><button class="music-toggle" data-song="dad" aria-label="Play Papa Meri Jaan">▶</button></div><div class="youtube-player" id="player-dad" hidden></div>
-    <p class="surprise-end">May he always be there to put his hand on your head. ♥</p>
-  </article>
-</div>
-
-<div class="toast" id="toast" role="status"></div>
-<script src="script.js"></script>
-</body></html>
+<script>
+const pages=5;
+const songs={
+  bros:{id:'9HbmDkLpXkU',start:35},
+  couple:{id:'yKc_OiYWOXU',start:35},
+  dad:{id:'dTZIa4BnpGE',start:45}
+};
+let currentSong=null;
+function goTo(n){
+  stopSong();
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p'+n).classList.add('active');
+  document.getElementById('counter').textContent=String(n).padStart(2,'0')+' / 05';
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(n===4 && !document.getElementById('letterReveal').classList.contains('show')) balloonBurst(5);
+}
+function playSong(which){
+  stopSong();
+  const s=songs[which], box=document.getElementById('player-'+which);
+  box.innerHTML='<iframe title="YouTube music player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src="https://www.youtube-nocookie.com/embed/'+s.id+'?autoplay=1&start='+s.start+'&playsinline=1&rel=0"></iframe>';
+  box.classList.add('visible');currentSong=which;
+}
+function stopSong(){
+  ['bros','couple','dad'].forEach(k=>{const box=document.getElementById('player-'+k);if(box){box.innerHTML='';box.classList.remove('visible')}});
+  currentSong=null;
+}
+function openLetter(){
+  document.getElementById('envelope').classList.add('opened');
+  const reveal=document.getElementById('letterReveal');
+  reveal.classList.add('show');
+  balloonBurst(18);
+  setTimeout(()=>reveal.scrollIntoView({behavior:'smooth',block:'center'}),250);
+}
+function revealSurprise(){
+  document.getElementById('surpriseContent').hidden=false;
+  document.getElementById('surprisePrompt').hidden=true;
+  balloonBurst(16);
+  setTimeout(()=>document.getElementById('surpriseContent').scrollIntoView({behavior:'smooth',block:'start'}),150);
+}
+function balloonBurst(count){
+  const colors=['🎈','❤️','🎈','💕','🎈'];
+  for(let i=0;i<count;i++){
+    const b=document.createElement('div');b.className='balloon';b.textContent=colors[Math.floor(Math.random()*colors.length)];
+    b.style.left=(3+Math.random()*92)+'%';b.style.animationDuration=(6+Math.random()*5)+'s';b.style.animationDelay=(Math.random()*1.8)+'s';b.style.fontSize=(28+Math.random()*28)+'px';
+    document.body.appendChild(b);setTimeout(()=>b.remove(),12500);
+  }
+}
+</script>
+</body>
+</html>
