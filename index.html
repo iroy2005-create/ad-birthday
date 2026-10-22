@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7e9df"><title>For Adarsshh, with love ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar"><span class="tiny-heart">♥</span><span>made with all my love</span><span class="tiny-heart">♥</span></header>
+<main>
+  <section class="screen active" id="page-birthday" aria-label="Birthday card">
+    <div class="intro"><p class="eyebrow">a little world made just for you</p><h1>Happy Birthday,<br><em>Adarsshh, my love.</em></h1><p class="sub">Every little page has a piece of my heart.</p></div>
+    <img class="hero-art" src="assets/birthday-card.png" alt="Scrapbook birthday card with Adarsshh's photo and cute birthday decorations">
+    <button class="primary next" data-next="page-bros">Let's begin <span>→</span></button>
+  </section>
+
+  <section class="screen" id="page-bros" aria-label="Friends memories">
+    <div class="section-head"><p class="eyebrow">the people who make life louder</p><h2>Your Jigar Ka Tukdas</h2><p>Same madness, different days. Forever memories. ♥</p></div>
+    <img class="full-art" src="assets/bros-collage.png" alt="Vintage scrapbook collage of Adarsshh with his friends">
+    <div class="music-card"><span class="music-icon">♫</span><div><strong>Hum Nahi Sudhrenge</strong><small>for you and your boys · main hook</small></div><button class="music-toggle" data-song="bros" aria-label="Play Hum Nahi Sudhrenge">▶</button></div><div class="youtube-player" id="player-bros" hidden></div>
+    <div class="nav-row"><button class="secondary back" data-prev="page-birthday">← Back</button><button class="primary next" data-next="page-us">Our little world →</button></div>
+  </section>
+
+  <section class="screen" id="page-us" aria-label="Our memories">
+    <div class="section-head"><p class="eyebrow">my favourite kind of memories</p><h2>My Love</h2><p>Of all the little things life gave me, I'm happiest it gave me you.</p></div>
+    <img class="full-art" src="assets/couple-collage.png" alt="Romantic scrapbook collage of the couple's memories">
+    <div class="music-card"><span class="music-icon">♫</span><div><strong>Dil Na Jaaneya</strong><small>our little soundtrack · main hook</small></div><button class="music-toggle" data-song="us" aria-label="Play Dil Na Jaaneya">▶</button></div><div class="youtube-player" id="player-us" hidden></div>
+    <div class="nav-row"><button class="secondary back" data-prev="page-bros">← Back</button><button class="primary next" data-next="page-letter">A letter for you →</button></div>
+  </section>
+
+  <section class="screen letter-screen" id="page-letter" aria-label="Love letter">
+    <div class="section-head"><p class="eyebrow">something I've been wanting to tell you</p><h2>A letter, just for you 💌</h2><p>There's a little piece of my heart waiting inside.</p></div>
+    <div class="envelope-wrap">
+      <button class="envelope" id="open-letter" aria-label="Open the love letter"><span class="envelope-heart">♥</span><span class="envelope-label">click here, my love</span><span class="envelope-hint">✉</span></button>
+    </div>
+    <div class="nav-row"><button class="secondary back" data-prev="page-us">← Back</button><button class="primary next" data-next="page-surprise">One last surprise →</button></div>
+  </section>
+
+  <section class="screen" id="page-surprise" aria-label="Special surprise">
+    <div class="surprise-center"><p class="eyebrow">one last little thing</p><h2>A Special Surprise</h2><p>There's one more memory I wanted to keep close to your heart.</p><button class="surprise-button" id="open-surprise"><span>♥</span><strong>Tap to open</strong><small>made with love, just for you</small></button></div>
+    <div class="nav-row"><button class="secondary back" data-prev="page-letter">← Back</button><button class="primary" id="restart">Start again ↺</button></div>
+  </section>
+</main>
+<footer>always, in all the little ways. ♥</footer>
+
+<div class="modal" id="letter-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="letter-modal"></div>
+  <article class="letter-paper modal-content" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+    <button class="close" data-close="letter-modal" aria-label="Close letter">×</button>
+    <div class="letter-deco">♡　✿　♡</div>
+    <h2 id="letter-title">My Dear Adarsshhy,</h2>
+    <div class="letter-copy">
+      <p>Before I start saying anything, a very, very happy birthday to you. ❤️</p>
+      <p>Today's day is so special to me. I am forever going to be grateful for being a part of your life and having you as a part of mine. You are such an amazing person, and I can't ever say this enough, I love you so, so much.</p>
+      <p>Sometimes, I genuinely wonder how I got so lucky to have you in my life. Out of all the people in this world, somehow, I got to meet you, know you, get close to you, and fall in love with you. And if there's one thing I know for sure, it's that having you in my life is one of the most beautiful things that has ever happened to me.</p>
+      <p>I don't think you realise how much you mean to me, Adarsshhy. It's not just about the big things you do or the beautiful moments we share. It's the little things, too. The way you talk to me, the way you make me smile without even trying, the way even the most ordinary conversations become special just because they're with you. It's the way you have slowly become such an important part of my everyday life. You're someone I want to tell everything to, someone I want to share my happiness with, someone I want beside me when things aren't going so well, too.</p>
+      <p>And if I could wish for one thing on your birthday, it would be for you to see yourself the way I see you. I wish you could see how special you are, how much you have to offer this world, and how deeply you can be loved. I wish you could see all the little things about yourself that make me fall for you over and over again. Because, my love, you deserve so much happiness. You deserve to have your dreams come true, to achieve everything you've ever worked for, to be proud of the person you're becoming, and to have a life filled with all the beautiful things your heart wishes for.</p>
+      <p>I want to be there for you through all of it. I want to be the person who celebrates your smallest achievements as if they're the biggest victories in the world. I want to be the person you can come to when you've had a bad day, when things get overwhelming, or when you just need someone to listen to you. I want to remind you of how capable you are when you doubt yourself and remind you how loved you are, even on the days when you don't feel your best.</p>
+      <p>I know life won't always be perfect. We won't always have the best days, and we might not always agree on everything. But I hope we always remember why we chose each other in the first place. I hope we keep choosing to understand each other, to be patient with each other, to communicate, to grow, and to love each other a little better every day. I don't expect us to be perfect. I just want what we have to be real, honest, and something we both feel safe in.</p>
+      <p>You know, if someone asked me what I love most about you, I don't think I could give them just one answer. Because it's not one particular thing. It's you. It's the person you are, the person you are becoming, the way you make me feel, and the way you've found a place in my heart that nobody else could ever occupy in quite the same way. And no matter how many times I tell you that I love you, I don't think those three words will ever be enough to explain everything I feel for you.</p>
+      <p>I love you on your best days, on your ordinary days, on your difficult days, and on all the days in between. I love you for who you are today and for the person you're still growing into. And if there's one thing I want you to carry with you after reading this letter, it's that you are so, so loved.</p>
+      <p class="letter-bold">Happy birthday, my love.</p><p>Here's to you, to us, and to all the beautiful memories we haven't made yet.</p>
+      <p>Forever grateful that it's you. Forever happy that I get to love you.</p>
+      <p class="letter-signoff">I love you endlessly, my Adarsshhy. ♥</p>
+    </div>
+    <div class="balloon-field" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
+  </article>
+</div>
+
+<div class="modal" id="surprise-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="surprise-modal"></div>
+  <article class="surprise-content modal-content" role="dialog" aria-modal="true" aria-labelledby="surprise-title">
+    <button class="close" data-close="surprise-modal" aria-label="Close surprise">×</button>
+    <p class="eyebrow">a little piece of your heart</p><h2 id="surprise-title">Your first hero, forever. ❤️</h2>
+    <p class="surprise-note">A little piece of your heart, and the man who will always have it.</p>
+    <img src="assets/dad-collage.png" alt="Adarsshh and his dad in a scrapbook collage" class="dad-art">
+    <div class="music-card dad-music"><span class="music-icon">♫</span><div><strong>Papa Meri Jaan</strong><small>for you and your forever hero · main hook</small></div><button class="music-toggle" data-song="dad" aria-label="Play Papa Meri Jaan">▶</button></div><div class="youtube-player" id="player-dad" hidden></div>
+    <p class="surprise-end">May he always be there to put his hand on your head. ♥</p>
+  </article>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body></html>
